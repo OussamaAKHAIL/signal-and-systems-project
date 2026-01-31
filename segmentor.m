@@ -14,8 +14,8 @@
 clc; clear; close all;
 
 %% 1. Configuration
-input_file = "C:\Users\akous\OneDrive\Desktop\MKA datasets\MKA datasets\All Dataset\Raw Data\Rshift\Rshiftzoom.wav"; 
-output_folder = "C:\Users\akous\OneDrive\Desktop\potato\segmentation\right_shift";
+input_file = "the file path"; 
+output_folder = "the folder where too save the segments";
 if ~exist(output_folder, 'dir'), mkdir(output_folder); end
 
 % avoiding over writing by offering unique name 
@@ -75,4 +75,5 @@ for i = 1:size(seg_matrix, 1)
     patch([t_start t_end t_end t_start], [-1 -1 1 1], 'y', 'FaceAlpha', 0.1, 'EdgeColor', 'none');
 end
 title(['nbr de segments: ', num2str(size(seg_matrix, 1))]);
+
 
